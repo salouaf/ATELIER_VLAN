@@ -198,7 +198,8 @@ oui si un routeur est présent pour faire du routage inter-vlan
 
 - Ajouter VLAN 30  
 - Mettre un DHCP par VLAN  
-  
+  <img width="567" height="315" alt="image" src="https://github.com/user-attachments/assets/c43b58c9-e04d-4a82-924b-be6d62b11597" />
+
 ---
 
 # 📝 Évaluation (/20)
