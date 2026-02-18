@@ -200,7 +200,8 @@ oui si un routeur est présent pour faire du routage inter-vlan
 - Mettre un DHCP par VLAN  
   <img width="567" height="315" alt="image" src="https://github.com/user-attachments/assets/c43b58c9-e04d-4a82-924b-be6d62b11597" />
 
----
+---<img width="758" height="175" alt="image" src="https://github.com/user-attachments/assets/b4a782d3-3a2d-4eff-bb6a-4f4f4be7cc53" />
+
 
 # 📝 Évaluation (/20)
 
