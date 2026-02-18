@@ -192,8 +192,7 @@ Questions :
 - Combien d’hôtes max ? on a 25bit dans partie réseau et 7 dans partie machine donc nombre d'hote max est 2^7 -2(identifiant réseau + adresse braodcast)  = 126 hotes 
 - Quelle plage IP valide ?  192.168.10.1 à 192.168.10.126
 - Peut-on encore communiquer avec VLAN 20 ?
-
----
+oui si un routeur est présent pour faire du routage inter-vlan
 
 # 🚀 Extensions
 
