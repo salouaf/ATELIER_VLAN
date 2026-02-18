@@ -33,9 +33,9 @@ Le masque définit :
 
 | Masque | Nb hôtes |
 |------|---------|
-/24 | 254 |
-/25 | 126 |
-/26 | 62 |
+   /24 | 254 |
+   /25 | 126 |
+   /26 | 62 |
 
 ---
 
@@ -46,9 +46,9 @@ Le masque définit :
         192.168.10.0/24 192.168.20.0/24
 
 PC1 -------- SW1 -------- R1 -------- PC3
-        |          (trunk)
-        |
-        PC2
+              |  (trunk)
+              |
+             PC2
 ```
 
 ---
@@ -155,45 +155,28 @@ Configurer IP + passerelle selon le plan d’adressage.
 PC1 → PC2  
 👉 Doit fonctionner
 
+* * Copie d'écran ici * *  
+
 ---
 
 ## Test 2 — Inter-VLAN
 PC1 → PC3  
 👉 Fonctionne uniquement grâce au routeur
 
+* * Copie d'écran ici * *  
+  
 ---
 
 # ❓ Questions de réflexion
 
-1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ?  
-2. Quel rôle joue le masque /24 ?  
-3. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ?  
-4. Pourquoi un trunk est-il nécessaire ?
+1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ? -> Répondez directement sur ce Readme.md 
+2. Quel rôle joue le masque /24 ? -> Répondez directement sur ce Readme.md  
+3. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ? -> Répondez directement sur ce Readme.md  
+4. Pourquoi un trunk est-il nécessaire ? -> Répondez directement sur ce Readme.md
 
 ---
 
-# 📘 Corrigé rapide
-
-✅ VLAN = séparation logique  
-✅ Chaque VLAN = sous-réseau différent  
-✅ Le masque définit la taille du VLAN  
-✅ Le trunk transporte plusieurs VLAN  
-✅ Le routeur permet l’inter-VLAN routing
-
----
-
-# 📝 Évaluation (/20)
-
-| Critère | Points |
-|--------|-------|
-VLAN créés correctement | 5 |
-Ports bien affectés | 5 |
-Trunk opérationnel | 5 |
-Inter-VLAN fonctionnel | 5 |
-
----
-
-# ⭐ Bonus Masques
+# ⭐ Travail sur les Masques
 
 Changer VLAN 10 en :
 
@@ -208,15 +191,24 @@ Questions :
 
 ---
 
-# 🚀 Extensions possibles
+# 🚀 Extensions
 
 - Ajouter VLAN 30  
 - Mettre un DHCP par VLAN  
-- Tester ACL entre VLAN  
-- Implémenter un switch L3
-
+  
 ---
 
+# 📝 Évaluation (/20)
+
+| Critère | Points |
+|--------|-------|
+VLAN créés correctement | 4 |
+Ports bien affectés | 2 |
+Trunk opérationnel | 4 |
+Inter-VLAN fonctionnel | 4 |
+Travail sur les masques | 4 |  
+Extention | 5 |  
+  
 # ✅ Fin du TP
 
 Si vous savez expliquer :
