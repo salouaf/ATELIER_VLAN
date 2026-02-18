@@ -171,12 +171,14 @@ PC1 → PC3
 
 # ❓ Questions de réflexion
 
-1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ? -> Répondez directement sur ce Readme.md 
-2. Quel rôle joue le masque /24 ? -> Répondez directement sur ce Readme.md  
-3. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ? -> Répondez directement sur ce Readme.md  
-4. Pourquoi un trunk est-il nécessaire ? -> Répondez directement sur ce Readme.md
-
----
+1. Pourquoi PC1 ne voit-il pas PC3 sans routeur ? car le PC1 et PC3 n'ont pas le meme ID Réseau PC1(192.168.10.0/24) et PC3(192.168.20.0/24)
+2. Quel rôle joue le masque /24 ? il sert à determiner quelle partie de l'IP représente le réseau et quelle partie représente l'hote 
+3. Que se passe-t-il si VLAN 10 et VLAN 20 ont le même réseau IP ? ->
+   - Conflit d'adresse, Table ARP incorrect car si un pc de vlan 10 essaie de joindre une autre dans meme vlan il pourrait ne jamais trouvé le bon MAC car un autre vlan à meme IP
+   - probleme de routage inter-VLAN car le routeur ne saura pas ou envoyé les paquets car 2 distination possible pour la meme IP
+   - Collision et panne réseau car les Braodcast des 2 vlan peuvent se mélanger
+5. Pourquoi un trunk est-il nécessaire ? -> Répondez directement sur ce Readme.md
+le Trunck permet de faire passer plusieurs VLAN en meme temp dans une seule interface 
 
 # ⭐ Travail sur les Masques
 
@@ -187,8 +189,8 @@ Changer VLAN 10 en :
 ```
 
 Questions :
-- Combien d’hôtes max ?  
-- Quelle plage IP valide ?  
+- Combien d’hôtes max ? on a 25bit dans partie réseau et 7 dans partie machine donc nombre d'hote max est 2^7 -2(identifiant réseau + adresse braodcast)  = 126 hotes 
+- Quelle plage IP valide ?  192.168.10.1 à 192.168.10.126
 - Peut-on encore communiquer avec VLAN 20 ?
 
 ---
